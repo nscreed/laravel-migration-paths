@@ -1,0 +1,31 @@
+{
+  "name": "nscreed/laravel-migration-paths",
+  "description": "Custom migration paths for Laravel project.",
+  "type": "library",
+  "keywords": ["laravel", "migrations"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Faisal Islam",
+      "email": "faisal.islam70@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=5.5.9",
+    "illuminate/console": "~5.5|^6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "NsCreed\\MigrationPath\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "NsCreed\\MigrationPath\\ServiceProvider"
+      ]
+    }
+  }
+}
