@@ -18,7 +18,7 @@ class CustomMigrationPaths
      * @return array
      * @throws \Throwable
      */
-    public function register()
+    public function getRegisteredPaths()
     {
         $paths = [];
 
