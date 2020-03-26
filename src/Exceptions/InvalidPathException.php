@@ -1,5 +1,5 @@
 <?php
-namespace NsCreed\MigrationPath;
+namespace NsCreed\MigrationPath\Exceptions;
 
 
 use Exception;
