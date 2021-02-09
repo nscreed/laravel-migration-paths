@@ -33,9 +33,12 @@ Add your custom directories:
 ```php
 'paths' => [
     database_path('migrations'),
+    
+    // Your Custom Migration Directories
     base_path('src/User/Migrations'),
     base_path('src/Page/Migrations'),
-    'path/to/custom_migrations', // Your Custom Migration Directory
+    'path/to/custom_migrations',
+    
 ],
 ```
 
