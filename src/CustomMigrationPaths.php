@@ -37,11 +37,19 @@ class CustomMigrationPaths
         $iterators = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path, RecursiveDirectoryIterator::SKIP_DOTS), RecursiveIteratorIterator::SELF_FIRST);
 
         foreach ($iterators as $iterator) {
-            if ($iterator->isDir()) {
-                $paths[] = $iterator->getRealPath();
+
+            /** @var \SplFileInfo $iterator */
+
+            switch ( $iterator->getType() ) {
+                case 'dir':
+                    $paths[] = $iterator->getRealPath();
+                    break;
+                case 'file':
+                    $paths[] = dirname($iterator->getRealPath());
+                    break;
             }
         }
 
-        return $paths;
+        return array_unique($paths);
     }
 }
